@@ -1,0 +1,38 @@
+# A project translates into one executable or library.
+project:
+
+  groups:
+    - group: Source Files
+      files:
+        - file: ./main.c
+
+  # List components to use for your application.
+  # A software component is a re-usable unit that may be configurable.
+  components:
+    - component: ARM::CMSIS:CORE
+    - component: Device:Startup
+    - component: Keil::Device:StdPeriph Drivers:ADC
+    - component: Keil::Device:StdPeriph Drivers:BKP
+    - component: Keil::Device:StdPeriph Drivers:CAN
+    - component: Keil::Device:StdPeriph Drivers:CEC
+    - component: Keil::Device:StdPeriph Drivers:CRC
+    - component: Keil::Device:StdPeriph Drivers:DAC
+    - component: Keil::Device:StdPeriph Drivers:DBGMCU
+    - component: Keil::Device:StdPeriph Drivers:DMA
+    - component: Keil::Device:StdPeriph Drivers:EXTI
+    - component: Keil::Device:StdPeriph Drivers:Flash
+    - component: Keil::Device:StdPeriph Drivers:Framework
+    - component: Keil::Device:StdPeriph Drivers:FSMC
+    - component: Keil::Device:StdPeriph Drivers:GPIO
+    - component: Keil::Device:StdPeriph Drivers:I2C
+    - component: Keil::Device:StdPeriph Drivers:IWDG
+    - component: Keil::Device:StdPeriph Drivers:PWR
+    - component: Keil::Device:StdPeriph Drivers:RCC
+    - component: Keil::Device:StdPeriph Drivers:RTC
+    - component: Keil::Device:StdPeriph Drivers:SDIO
+    - component: Keil::Device:StdPeriph Drivers:SPI
+    - component: Keil::Device:StdPeriph Drivers:TIM
+    - component: Keil::Device:StdPeriph Drivers:USART
+    - component: Keil::Device:StdPeriph Drivers:WWDG
+  packs:
+    - pack: Keil::STM32F1xx_DFP@2.4.1

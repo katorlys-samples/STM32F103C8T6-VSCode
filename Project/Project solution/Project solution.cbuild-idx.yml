@@ -1,0 +1,13 @@
+build-idx:
+  generated-by: csolution version 2.2.1
+  cdefault: ${CMSIS_COMPILER_ROOT}/cdefault.yml
+  csolution: Project solution.csolution.yml
+  cprojects:
+    - cproject: Project/Project.cproject.yml
+  cbuilds:
+    - cbuild: Project/Project.Debug+STM32F103C8.cbuild.yml
+      project: Project
+      configuration: .Debug+STM32F103C8
+    - cbuild: Project/Project.Release+STM32F103C8.cbuild.yml
+      project: Project
+      configuration: .Release+STM32F103C8

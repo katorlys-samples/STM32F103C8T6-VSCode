@@ -1,0 +1,8 @@
+cbuild-pack:
+  resolved-packs:
+    - resolved-pack: ARM::CMSIS@6.0.0
+      selected-by:
+        - ARM::CMSIS
+    - resolved-pack: Keil::STM32F1xx_DFP@2.4.1
+      selected-by:
+        - Keil::STM32F1xx_DFP@2.4.1

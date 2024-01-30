@@ -1,0 +1,43 @@
+# A solution is a collection of related projects that share same base configuration.
+solution:
+  created-for: CMSIS-Toolbox@2.0.0
+  cdefault:
+  compiler: AC6
+
+  # List the packs that define the device and/or board.
+  packs:
+    - pack: Keil::STM32F1xx_DFP@2.4.1
+    - pack: ARM::CMSIS
+
+  # List different hardware targets that are used to deploy the solution.
+  target-types:
+    - type: STM32F103C8
+      device: STMicroelectronics::STM32F103C8
+
+  # List of different build configurations.
+  build-types:
+    - type: Debug
+      debug: on
+      optimize: none
+      define:
+        - USE_STDPERIPH_DRIVER
+      misc:
+        - C:
+            - -std=c99
+          ASM:
+            - -Wa,armasm,--diag_suppress=A1950W
+
+    - type: Release
+      debug: off
+      optimize: balanced
+      define:
+        - USE_STDPERIPH_DRIVER
+      misc:
+        - C:
+            - -std=c99
+          ASM:
+            - -Wa,armasm,--diag_suppress=A1950W
+
+  # List related projects.
+  projects:
+    - project: Project/Project.cproject.yml
