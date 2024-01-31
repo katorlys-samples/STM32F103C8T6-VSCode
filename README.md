@@ -4,6 +4,8 @@
 ## 简介
 可直接在 Visual Studio Code 中使用的 STM32F103C8T6 项目工程模板。  
 
+环境配置教程：https://blog.katorly.work/STM32-VSCode-with-Keil-Studio  
+
 **库类型:** STM32标准库  
 **平台:** Keil Studio  
 **调试器:** ST-Link  
@@ -13,8 +15,8 @@
 
 ## 使用方法
 1. 复制`Project`文件夹 (路径不能有中文)
-2. 用 VSCode 打开`Project solution`文件夹
-3. 新建文件、修改文件名、删除文件时, 要在`Project/Project.cproject.yml`里的`project.groups.files`处一个个地手动添加文件, 如下例子所示:
+2. 用 VSCode 打开
+3. 新建文件、修改文件名、删除文件时, 要在`Project.cproject.yml`里的`project.groups.files`处一个个地手动添加文件, 如下例子所示:
 ```yml
 groups:
     - group: Source Files
@@ -23,8 +25,8 @@ groups:
         - file: ./System/Delay.c
         - file: ./System/Delay.h
 ```
-5. 在侧栏中的`CMSIS`中点击`Build`或`Build (clean)`Build即可在`out/Project/STM32F103C8/`文件夹中获取到编译后的文件 (目前仅支持`.axf`)
-6. 点击`Run`即可把编译后的文件通过ST-LINK下载到STM32中, 若此前未构建则需先点击`Build`, 先构建再下载
-7. 点击`Debug`即可开始调试, 与 Keil MDK 一样
-8. 发送项目文件给别人时, 可以把`out`和`tmp`文件夹删除, 其它文件则不能删除
+4. 在侧栏的`CMSIS`中点击`Build`或`Build (clean)`Build即可在`out/Project/STM32F103C8/`文件夹中获取到编译后的文件 (目前仅支持`.axf`)
+5. 点击`Run`即可把编译后的文件通过ST-LINK下载到STM32中, 若此前未构建则需先点击`Build`, 先构建再下载
+6. 点击`Debug`即可开始调试, 与 Keil MDK 一样
+7. 发送项目文件给别人时, 可以把`out`和`tmp`文件夹删除, 其它文件则不能删除
 
